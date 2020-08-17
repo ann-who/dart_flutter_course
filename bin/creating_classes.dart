@@ -1,5 +1,5 @@
 void main() {
-  var person = new Person();
+  var person = new Person('Ann');
 
   person.firstName = 'Ann';
 
