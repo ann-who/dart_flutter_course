@@ -1,9 +1,10 @@
 void main() {
-  new Deck();
+  var deck = new Deck();
+  print(deck);
 }
 
 class Deck {
-  List<Card> cards;
+  List<Card> cards = [];
 
   Deck() {
     var ranks = [
@@ -29,6 +30,10 @@ class Deck {
         cards.add(card);
       }
     }
+  }
+
+  String toString() {
+    return 'Here is your new deck!';
   }
 }
 
