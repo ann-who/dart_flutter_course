@@ -26,14 +26,14 @@ class Deck {
 
     for (var suit in suits) {
       for (var rank in ranks) {
-        var card = new Card(suit, rank);
+        var card = new Card(rank, suit);
         cards.add(card);
       }
     }
   }
 
-  String toString() {
-    return 'Here is your new deck!';
+  toString() {
+    return cards.toString();
   }
 }
 
@@ -42,4 +42,8 @@ class Card {
   String rank;
 
   Card(this.rank, this.suit);
+
+  toString() {
+    return '$rank of $suit';
+  }
 }
