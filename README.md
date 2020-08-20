@@ -1,5 +1,6 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+# Hello!
+## Here I have my first Dart course projects.
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+There's nothing great, I'm `just learning`. I don't know anything about IT field yet but I'm trying. It's **hard** but also **fun**!
+
+#### ***Have a good day!***
