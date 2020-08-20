@@ -1,5 +1,6 @@
 void main() {
   var deck = new Deck();
+  deck.shuffle();
   print(deck);
 }
 
@@ -34,6 +35,10 @@ class Deck {
 
   toString() {
     return cards.toString();
+  }
+
+  shuffle() {
+    cards.shuffle();
   }
 }
 
