@@ -1,7 +1,7 @@
 void main() {
   var deck = new Deck();
 
-  print(deck);
+  // print(deck);
   // print(deck.deal(5));
   deck.remove('Diamonds', 'Ace');
   print(deck);
@@ -30,25 +30,26 @@ class Deck {
 
     for (var suit in suits) {
       for (var rank in ranks) {
-        var card = new Card(rank, suit);
+        var card = new Card(suit: suit, rank: rank);
         cards.add(card);
       }
     }
   }
 
-  toString() {
+  @override
+  String toString() {
     return cards.toString();
   }
 
-  shuffle() {
+  void shuffle() {
     cards.shuffle();
   }
 
-  cardsWithSuit(String suit) {
+  Iterable<Card> cardsWithSuit(String suit) {
     return cards.where((card) => card.suit == suit);
   }
 
-  deal(int handSize) {
+  List<Card> deal(int handSize) {
     var hand = cards.sublist(0, handSize);
     cards = cards.sublist(handSize);
 
@@ -64,9 +65,10 @@ class Card {
   String suit;
   String rank;
 
-  Card(this.rank, this.suit);
+  Card({this.rank, this.suit});
 
-  toString() {
+  @override
+  String toString() {
     return '$rank of $suit';
   }
 }
